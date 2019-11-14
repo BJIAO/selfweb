@@ -1,0 +1,12 @@
+﻿body{background:#ccc;text-align:center;}
+/*这里可以采用onmouseover与onmouseout来做,可以不加a,改变光标的css-cursor属性即可*/
+a{display:block;width:180px;height:25px;}
+a:hover{background:#d0d0d0;}
+
+/*菜单*/
+
+table{border-spacing:0px;}
+td{height:27px;line-height:27px;background:url(images/left_menu_bg.gif) no-repeat;}
+.five{height:3px;}
+.three{height:5px;}
+.two{height:2px;}

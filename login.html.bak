@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<title>Programming-登录界面</title>
+<style type="text/css"></style>
+<script type="text/javascript">
+//用户名获得焦点
+function focus_username()
+{
+	var hidden_prompt = document.getElementById("hidden_prompt");
+	hidden_prompt.style.display = "none";
+}
+//用户名失去焦点验证
+function blur_username()
+{
+	//获取id=username input对象的的值,id=td_username的对象
+	var username = document.form_login.username.value;
+	var td_username = document.getElementById("td_username");
+	var ok_img = document.getElementById("ok_username");
+	ok_img.innerHTML = "";
+	if (username == "")
+	{
+		td_username.innerHTML = "用户名不能为空";
+	}else if (username.length < 5 || username.length >20)
+	{
+		td_username.innerHTML = "用户名的长度在5-20的字符之间";
+	}else if (checkOtherChar(username))
+	{
+		td_username.innerHTML = "用户名不能含有特殊符号";
+	}else
+	{
+		//获得id=ok_img对象
+		td_username.innerHTML = "";
+		ok_img.innerHTML = "<img src='images/login_ok.gif' />";
+		//这里的返回值是在提交表单时用上
+		return true;
+	}
+}
+//密码获得焦点
+function focus_pwd()
+{
+	var hidden_prompt = document.getElementById("hidden_prompt");
+	hidden_prompt.style.display = "none";
+}
+//密码失去焦点验证
+function blur_pwd()
+{
+	//获取id=pwd input对象的的值,id=td_pwd的对象,id=ok_img对象
+	var pwd = document.form_login.pwd.value;
+	var td_pwd = document.getElementById("td_pwd");
+	var ok_img = document.getElementById("ok_pwd");
+	td_pwd.innerHTML = "";
+	if (pwd == "")
+	{
+		td_pwd.innerHTML = "密码不能为空";
+	}else if (pwd.length < 5 || pwd.length >20)
+	{
+		td_pwd.innerHTML = "密码的长度在10-20的字符之间";
+	}else if (checkOtherChar(pwd))
+	{
+		td_pwd.innerHTML = "密码不能含有特殊符号";
+	}else
+	{
+		ok_img.innerHTML = "<img src='images/login_ok.gif' />";
+		return true;
+	}
+}
+//提交表单时验证表单
+function checkForm()
+{
+	//获取用户名input的值,密码input的值,id=hidden_prompt的对象
+	var username = document.form_login.username.value;
+	var pwd = document.form_login.pwd.value;
+	var hidden_prompt = document.getElementById("hidden_prompt");
+	if (username !="baijiao" || pwd != "baijiao520")
+	{
+		hidden_prompt.style.display = "block";
+		return false;
+	}
+	location.href = "html/main.html"
+}
+function checkOtherChar(str)
+{
+	var arr = ["*","&","<",">","$","\\","/"];
+	for (var i=0;i<arr.length ;i++ )
+	{
+		for (var j=0;j<str.length ;j++ )
+		{
+			if (arr[i] == str.charAt(j))
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+</script>
+</head>
+
+<body>
+<div class="top">
+	<div class="floatL"><a href="html/null.html"><img src="images/login_logo.png" /></a></div>
+</div>
+<div class="mid">
+	<div class="login">
+		<form name="form_login" method="post">
+			<table>
+				<tr>
+					<th align="left"><h1>账号登录</h1></th>
+				</tr>
+				<tr>
+					<th id="hidden_prompt" style="text-align:center;color:red;background:#cc9999;height:30px;display:none">账号或者密码错误</th>
+				</tr>
+				<tr>
+					<!--this表示当前对象,event表示渐渐发生时产生的参数,这两个都是关键字-->
+					<td colspan="2"><input type="text" name="username" placeholder="用户名" onfocus="focus_username();this.select()" onblur="blur_username()" /><span id="ok_username"></span></td>
+				</tr>
+				<tr>
+					<td id="td_username" style="color:red"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-top:10px"><input type="password" name="pwd" placeholder="密码" onfocus="focus_pwd()" onblur="blur_pwd()" /><span id="ok_pwd"></span></td>
+				</tr>
+				<tr>
+					<td id="td_pwd" style="color:red"></td>
+				</tr>
+				<tr>
+					<td style="padding-top:10px">
+						<span class="floatL"><a href="#" onclick="JavaScript:this.innerHTML='点它啊<font color=red>-><font>'">没有账号?</a></span>
+						<span class="floatR"><a href="#" onclick="JavaScript:alert('用户名:baijiao\n密码:baijiao520')">你想知道吗?</a></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><input type="button" value="登录" style="background:#9393ff;" onclick="checkForm()" /></td>
+				</tr>
+			</table>
+		<!--<ul>
+			<li><h1>账号登录</h1></li>
+			<li><input id="username" type="text" name="username" placeholder="用户名" onfocus="focus_username()" onblur="blur_username()" /></li>
+			<li class="hidd_username" border-color="#444" height="20" width="20"></li>
+			<li><input id="pwd" type="password" name="password" placeholder="密码" /></li>
+			<li class="hidd_pwd"></li>
+			<li>
+				<span class="floatL"><a href="#" onclick="javascript:window.alert('傻子点登录右下角的-你想知道吗?')">忘记密码?</a></span>
+				<span class="floatR"><a href="#" onclick="javascript:window.alert('账号:baijiao\n密码:520baijiao')">你想知道吗?</a></span></li>
+			<li><input class="blue" type="submit" onsubmit="return skip()" value="登录" /></li>
+		</ul>-->
+		</form>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="bottom"></div>
+</body>
+</html>
+

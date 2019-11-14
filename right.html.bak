@@ -1,0 +1,57 @@
+<!--过渡的DTD文档类型定义(验证机制)-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
+<link rel="stylesheet" href="css/right.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/right.js" type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+<div class="box">
+	<div id="header"><iframe src="header.html" height="155px" width="960px" frameborder="0"></iframe></div>
+	<div class="content">
+			<h1>编程语言</h1>
+			<p>编程语言俗称“计算机语言”，种类非常的多，总的来说可以分成机器语言、汇编语言、高级语言三大类。电脑每做的一次动作，一个步骤，都是按照已经用计算机语言编好的程序来执行的，程序是计算机要执行的指令的集合，而程序全部都是用我们所掌握的语言来编写的。所以人们要控制计算机一定要通过计算机语言向计算机发出命令。 目前通用的编程语言有两种形式：汇编语言和高级语言。</p>
+			<h3>汇编语言</h3>
+			<div class="scroll floatR">
+				<div class="scroll_top"><h3>编程语言分类</h3></div>
+				<div class="scroll_img floatL">
+					<img id="scroll_img_id" src="images/programming_language1.jpg" /><br />
+				</div>
+				<div class="scroll_number floatR">
+					<ul>
+						<li id="scroll_number_1" onmouseover="scrollShow(1)">1</li>
+						<li id="scroll_number_2" onmouseover="scrollShow(2)">2</li>
+						<li id="scroll_number_3" onmouseover="scrollShow(3)">3</li>
+					</ul>
+				</div>
+			</div>
+			<p>汇编语言的实质和机器语言是相同的，都是直接对硬件操作，只不过指令采用了英文缩写的标识符，更容易识别和记忆。它同样需要编程者将每一步具体的操作用命令的形式写出来。汇编程序通常由三部分组成：指令、伪指令和宏指令。汇编程序的每一句指令只能对应实际操作过程中的一个很细微的动作。例如移动、自增，因此汇编源程序一般比较冗长、复杂、容易出错，而且使用汇编语言编程需要有更多的计算机专业知识，但汇编语言的优点也是显而易见的，用汇编语言所能完成的操作不是一般高级语言所能够实现的，而且源程序经汇编生成的可执行文件不仅比较小，而且执行速度很快。</p> 
+			<h3>脚本语言</h3>
+			<p>脚本语言（Script language，scripting language，scripting programming language）是为了缩短传统的编写-编译-链接-运行（edit-compile-link-run）过程而创建的计算机编程语言。此命名起源于一个脚本“screenplay”，每次运行都会使对话框逐字重复。</p>
+			<p>早期的脚本语言经常被称为批量处理语言或工作控制语言。一个脚本通常是解释运行而非编译。</p>
+			<p>虽然许多脚本语言都超越了计算机简单任务自动化的领域，成熟到可以编写精巧的程序，但仍然还是被称为脚本。几乎所有计算机系统的各个层次都有一种脚本语言。包括操作系统层，如计算机游戏，网络应用程序，字处理文档，网络软件等。在许多方面，高级编程语言和脚本语言之间互相交叉，二者之间没有明确的界限。</p>
+			<p>脚本编程速度更快，且脚本文件明显小于如同类C程序文件。这种灵活性是以执行效率为代价的。脚本通常是解释执行的，速度可能很慢，且运行时更耗内存。在很多案例中，如编写一些数十行的小脚本，它所带来的编写优势就远远超过了运行时的劣势，尤其是在当前程序员工资趋高和硬件成本趋低时。</p>
+			<p>脚本语言是一种解释性的语言，例如Python、vbscript,javascript,installshield script,ActionScript等等，它不象c\c++等可以编译成二进制代码，以可执行文件的形式存在.</p>  
+			<h3>机器语言</h3>
+			<p>由于计算机内部只能接受二进制代码，因此，用二进制代码0和1描述的指令称为机器指令，全部机器指令的集合构成计算机的机器语言，用机器语言编程的程序称为目标程序。只有目标程序才能被计算机直接识别和执行。但是机器语言编写的程序无明显特征，难以记忆，不便阅读和书写，且依赖于具体机种，局限性很大，机器语言属于低级语言。</p>  
+			<h3>高级语言</h3>
+			<p>高级语言是大多数编程者的选择。和汇编语言相比，它不但将许多相关的机器指令合成为单条指令，并且去掉了与具体操作有关但与完成工作无关的细节，例如使用堆栈、寄存器等，这样就大大简化了程序中的指令。同时，由于省略了很多细节，编程者也就不需要有太多的专业知识。</p>
+			<p>高级语言主要是相对于汇编语言而言，它并不是特指某一种具体的语言，而是包括了很多编程语言，像最简单的编程语言PASCAL语言也属于高级语言。</p>
+			<p>高级语言所编制的程序不能直接被计算机识别，必须经过转换才能被执行，按转换方式可将它们分为两类：</p>
+			<p>解释类：执行方式类似于我们日常生活中的“同声翻译”，应用程序源代码一边由相应语言的解释器“翻译”成目标代码（机器语言），一边执行，因此效率比较低，而且不能生成可独立执行的可执行文件，应用程序不能脱离其解释器，但这种方式比较灵活，可以动态地调整、修改应用程序。如较早时期的Qbasic语言。</p>
+			<p>编译类：编译是指在应用源程序执行之前，就将程序源代码“翻译”成目标代码（机器语言），因此其目标程序可以脱离其语言环境独立执行，使用比较方便、效率较高。但应用程序一旦需要修改，必须先修改源代码，再重新编译生成新的目标文件（* .obj，也就是OBJ文件）才能执行，只有目标文件而没有源代码，修改很不方便。</p> 
+	</div>
+</div>
+<div class="bottom"></div>
+</body>
+</html>
+

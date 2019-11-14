@@ -1,0 +1,65 @@
+function blur_username()
+{
+	//获取id=username input对象的的值,id=td_username的对象
+	var username = document.form_register.username.value;
+	var td_username = document.getElementById("td_username");
+	var ok_img = document.getElementById("ok_username");
+	ok_img.innerHTML = "";
+	if (username == "")
+	{
+		td_username.innerHTML = "手机号不能为空";
+	}else if (username.length != 11)
+	{
+		td_username.innerHTML = "手机号为11个数字组成";
+	}else if (checkOtherChar(username))
+	{
+		td_username.innerHTML = "手机号不能含有特殊符号";
+	}else
+	{
+		//获得id=ok_img对象
+		td_username.innerHTML = "";
+		ok_img.innerHTML = "<img src='images/login_ok.gif' />";
+		//这里的返回值是在提交表单时用上
+		return true;
+	}
+}
+
+//密码失去焦点验证
+function blur_pwd()
+{
+	//获取id=pwd input对象的的值,id=td_pwd的对象,id=ok_img对象
+	var pwd = document.form_register.pwd.value;
+	var td_pwd = document.getElementById("td_pwd");
+	var ok_img = document.getElementById("ok_pwd");
+	ok_img.innerHTML = "";
+	if (pwd == "")
+	{
+		td_pwd.innerHTML = "密码不能为空";
+	}else if (pwd.length < 5 || pwd.length >20)
+	{
+		td_pwd.innerHTML = "密码的长度在10-20的字符之间";
+	}else if (checkOtherChar(pwd))
+	{
+		td_pwd.innerHTML = "密码不能含有特殊符号";
+	}else
+	{
+		ok_img.innerHTML = "<img src='images/login_ok.gif' />";
+		return true;
+	}
+}
+
+function checkOtherChar(str)
+{
+	var arr = ["*","&","<",">","$","\\","/"];
+	for (var i=0;i<arr.length ;i++ )
+	{
+		for (var j=0;j<str.length ;j++ )
+		{
+			if (arr[i] == str.charAt(j))
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}

@@ -1,0 +1,26 @@
+<!--框架的DTD文档类型定义-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/public.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>programming</title>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<!--框架先设置结构再有内容-->
+<frameset rows="64,*" frameborder="no">
+	<frame name="top" src="top.html" noresize="noresize"/>
+	<frameset cols="182,*">
+		<frame name="left" src="left.html" noresize="noresize" scrolling="no"/>
+		<frame name="right" src="right.html" noresize="noresize"/>
+	</frameset>
+</frameset>
+<noframes>对不起，你的浏览器不支持frameset元素！</noframes>
+</html>
+

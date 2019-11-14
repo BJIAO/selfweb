@@ -1,0 +1,17 @@
+body,input,a,img,ul,li,ol,p,h1,frameset,frame,form,table,td,th,tr{padding:0px;margin:0px;}
+ul,ol,li{list-style:none;}
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#444;text-decoration:underline;}
+body{
+	font-size:12px;
+	font:12px/1.125 Arial,Helvetica,sans-serif;
+	font-family:"SimSun";;
+	color:#444;
+	/**/
+}
+img{border:0px;}
+.blue{background-color:#5353ff;}
+.floatL{float:left;}
+.floatR{float:right;}
+.clear{float:both;}
+

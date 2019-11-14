@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Programming-注册界面</title>
+<style type="text/css">
+table,td,tr,input{ margin:0px; padding:0px}
+body{ background:#9CF}
+table{ margin:auto;}
+td{width:250px}
+
+td_length{width:300px}
+</style>
+<script src="js/register.js"></script>
+</head>
+
+<body>
+
+<div class="mid">
+	<div class="login">
+		<form name="form_register" method="post" action="php/register.php" onsubmit="return checkform()">
+			<table>
+				<tr>
+					<th align="left" colspan="3"><h1>账号注册</h1></th>
+				</tr>
+				<tr>
+                	<td align="right">手机号:</td>
+					<td><input type="text" name="username" placeholder="用户名" required onfocus="this.select()" onblur="blur_username()" /><span id="ok_username"></span></td>
+                    <td id="td_username" class="td_length" class="length" style="color:red">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="right">密码:</td>
+					<td><input type="password" name="pwd" placeholder="密码" required onblur="blur_pwd()" /><span id="ok_pwd"></span></td>
+                    <td id="td_pwd" class="td_length" style="color:red"></td>
+				</tr>
+				<tr>
+					<td align="right"><label>性别:</label></td>
+      				<td><input name="sex" type="radio" value="1" checked>男<input type="radio" name="sex" value="2">女</td>
+     				<td align="left" class="td_length">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="right">身份证号:</td>
+					<td><input type="text" name="identity" placeholder="请输入身份证号码" required onblur="blur_identity()"><span id="ok_identity"></span></td>
+                    <td id="td_identity" class="td_length" style="color:red">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="right">地址:</td>
+					<td><input name="address" type="text" required placeholder="请输入现居住地址" onblur="blur_address()" size="30"><span id="ok_address"></span></td>
+                    <td id="td_address" class="td_length" style="color:red">&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="center"><input type="submit" value="注册" style="background:#9393ff;" /></td>
+				</tr>
+			</table>
+		</form>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="bottom"></div>
+<blockquote>&nbsp;</blockquote>
+</body>
+</html>
+<script>
+//这里为什么一外调就出错
+function blur_address()
+{
+	var address = document.form_register.address.value;
+	var td_address = document.getElementById("td_address");
+	var ok_img = document.getElementById("td_address");
+	ok_img.innerHTML = "";
+	if (address.indexOf("市") && (address.indexOf("区") || address.indexOf("县")))
+	{
+		td_address.innerHTML = "地址的格式不对,请输入详细的地址";
+		return false;
+	}else if (checkOtherChar(address))
+	{
+		td_address.innerHTML = "地址不能含有特殊符号";
+		return false;
+	}else
+	{
+		td_address.innerHTML = "";
+		ok_img.innerHTML = "<img src='images/login_ok.gif' />";
+		return true;
+	}
+}
+</script>
+

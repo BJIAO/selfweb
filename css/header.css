@@ -1,0 +1,30 @@
+/*top*/
+.top{border-bottom:1px solid #ccc;}
+.menu{height:25px;}
+.menu ul{float:right;}
+.menu li{height:25px;line-height:25px;float:left;border-right:1px dotted #444;}
+.menu .noLine{border:none;}
+.menu a{padding:0px 15px;}
+#dd_menu_top_down{
+	position:absolute;
+	width:180px;
+	text-align:center;
+	border:1px solid #999;
+	display:none;
+	background-color:#FFF;
+	padding-left:10px;
+	div{
+		text-align:center;
+	}
+	}
+*html #dd_menu_top_down{/*only IE6*/
+	right:30px;
+	top:25px;
+	}
+*+html #dd_menu_top_down{/*only IE7*/
+	right:30px;
+	top:25px;
+	}
+#dd_menu_top_down li{
+	float:none;
+	}

@@ -1,0 +1,48 @@
+body,input,a,img,ul,li,ol,p,h1,form,table,td,th,tr{padding:0px;margin:0px;}
+ul,ol,li{list-style:none;}
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#444;text-decoration:underline;}
+body{
+	font-size:12px;
+	font:12px/1.125 Arial,Helvetica,sans-serif;
+	font-family:"SimSun";;
+	color:#444;
+	/**/
+}
+img{border:0px;}
+.blue{background-color:#5353ff;}
+.floatL{float:left;}
+.floatR{float:right;}
+.clear{float:both;}
+/*top*/
+.top{height:100px;}
+.top .floatL{
+	width:320px;
+	position:absolute;
+	top:45px;
+	left:245px;
+}
+.top a{height:36px;width:320px;}
+
+/*mid*/
+
+.mid{
+	height:600px;
+	background:url(../images/bg.jpg) no-repeat;
+	font-size:16px;
+}
+.mid a:hover{color:blue;}
+.mid .login{
+	width:300px;
+	height:330px;
+	padding:25px 25px;
+	position:relative;
+	top:20%;
+	left:65%;
+	background:white;
+}
+.mid td{height:20px;}
+.mid h1{padding-bottom:25px;}
+.mid input{height:30px;width:270px;line-height:30px;}
+/*button*/
+.bottom{height:50px;width:1000px;}

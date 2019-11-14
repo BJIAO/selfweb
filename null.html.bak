@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/public.css" />
+<title>无标题</title>
+<style type="text/css">
+a:hover{color:blue;text-decoration:underline;}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	window.setInterval("skip()",1000);
+}
+var i = 4;
+function skip()
+{
+	var seconds = document.getElementById("countDown");
+	seconds.innerHTML = i + "s";
+	if (i-- == 0)
+	{
+		location.href="login.html";
+	}
+}
+</script>
+</head>
+
+<body>
+<div style="position:absolute;top:40%;left:40%">
+	要登陆后才能查看哦,正在跳转<br /><br />
+	<a href="login.html"><span id="countDown" style="color:#0080ff">5s</span>后自动跳转,也可点击本处自动跳转</a>
+</div>
+</body>
+</html>

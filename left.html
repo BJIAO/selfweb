@@ -1,0 +1,123 @@
+<!--过渡的DTD文档类型定义(验证机制)-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/public.css" />
+<link rel="stylesheet" type="text/css" href="css/left.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+//点击隐藏或出现php语言
+function show_language()
+{
+	var arr = ["php_video","php_tool","php_experience","php_experience","php_interview"];
+	var add = document.getElementById("floatR");
+	if (php_video.style.display == "block")
+	{
+		for (var i=0;i<arr.length ;i++ )
+		{
+			document.getElementById(arr[i]).style.display = "none";
+		}
+		add.innerHTML = "+";
+	}else
+	{
+		for (var i=0;i<arr.length;i++ )
+		{
+			document.getElementById(arr[i]).style.display = "block";
+		}
+		add.innerHTML = "-";
+	}
+}
+//点击隐藏或出现小程序详细
+function show_program()
+{
+	var arr = ["program_caiquan","program_2","program_3","program_4"];
+	var add = document.getElementById("floatR");
+	if (program_caiquan.style.display == "block")
+	{
+		for (var i=0;i<4 ;i++ )
+		{
+			document.getElementById(arr[i]).style.display = "none";
+		}
+		add.innerHTML = "+";
+	}else
+	{
+		for (var i=0;i<4 ;i++ )
+		{
+			document.getElementById(arr[i]).style.display = "block";
+		}
+		add.innerHTML = "-";
+	}
+}
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<!--<ul>
+	<li><img src="images/menu_topimg.gif" /></li>
+	<li>网站菜单栏</li>
+	<li><a href="#">后台主页</a></li>
+	<li><a href="#">PHP</a></li>
+	<li><a href="#">HTML</a></li>
+	<li><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+	<li><a href="#">C语言</a></li>
+	<li><a href="#">后台主页</a></li>
+	<li><a href="#">后台主页</a></li>
+</ul>-->
+<body>
+<table>
+	<tr>
+		<td class="three"><img src="images/left_menu_topimg.gif" /></td>
+	</tr>
+	<tr>
+		<td><h2>网站菜单栏</h2></td>
+	</tr>
+	<tr>
+		<td class="five"><img src="images/left_menu_topline.gif" /></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold"><a target="_top" href="main.html">网站主页</a></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold"><a href="#" onclick="show_language()">PHP<span id="floatR" class="floatR" style="font-size:18px;padding-right:10px;">+</span></a></td>
+	</tr>
+	<tr>
+		<td id="php_video" style="display:none"><a target="right" href="right_video.html">1.PHP学习路线图—视频篇：</a></td>
+	</tr>
+	<tr>
+		<td id="php_tool" style="display:none"><a target="right" href="right_tool.html">2.PHP学习路线图—工具篇：</a></td>
+	</tr>
+	<tr>
+		<td id="php_experience" style="display:none"><a target="right" href="right_experience.html">3.PHP学习路线图—经验篇：</a></td>
+	</tr>
+	<tr>
+		<td id="php_interview" style="display:none"><a target="right" href="right_interview.html">4.PHP学习路线图—面试篇：</a></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold"><a href="#" onclick="show_program()">小程序<span id="floatR" class="floatR" style="font-size:18px;padding-right:10px;">+</span></a></td>
+		<tr>
+		<td id="program_caiquan" style="display:none"><a target="right" href="caiquan.html">小游戏-猜拳</a></td>
+	</tr>
+	<tr>
+		<td id="program_2" style="display:none"><a target="right" href="#">小游戏-待开发</a></td>
+	</tr>
+	<tr>
+		<td id="program_3" style="display:none"><a target="right" href="#">小游戏-待开发</a></td>
+	</tr>
+	<tr>
+		<td id="program_4" style="display:none"><a target="right" href="#">小游戏-待开发</a></td>
+	</tr>
+
+	</tr>
+	<tr>
+		<td style="font-weight:bold"><a href="#">C语言</a></td>
+	</tr>
+	<tr>
+		<td class="two"><img src="images/left_menu_bottomimg.gif" /></td>
+	</tr>
+</table>
+</body>
+</html>
+

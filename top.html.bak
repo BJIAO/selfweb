@@ -1,0 +1,52 @@
+<!--过渡的DTD文档类型定义(验证机制)-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/public.css" type="text/css" />
+<title>无标题文档</title>
+<script type="text/javascript">
+window.onload = function (){
+	window.setInterval("name_interval('Programming-登录界面')",500);
+}
+var i = 0;
+var str_name = "";
+function name_interval(str)
+{
+	//获取id=name的对象
+	var name = document.getElementById("name");
+	str_name += str[i];	
+	if (i == str.length)
+	{
+		str_name = "";
+		name.innerHTML = "";
+		i = 0;
+	}else
+	{
+		name.style.color = "red";
+		name.innerHTML = str_name;
+		i++;
+	}
+}
+
+</script>
+<style type="text/css">
+body{
+	background:url(../images/top-bg.gif) repeat-x;
+}
+.box{
+	height:57px;
+	width:1000px;
+	margin:0px auto;
+}
+.box .name{height:40px;line-height:37px;text-align:center;font-size:18px;font-weight:bold;}
+</style>
+</head>
+
+<body>
+<div class="box">
+	<div class="name" id="name" ></div>
+</div>
+</body>
+</html>
+

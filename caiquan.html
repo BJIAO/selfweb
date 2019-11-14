@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+<title>无标题</title>
+<style type="text/css">
+body,ul,li,img{margin:0px;padding:0px;}
+ul,li{list-style:none;}
+img{border:0px;}
+body{
+	font-family: "Open Sans", sans-serif;
+	font-size:12px;
+	text-align:center;
+}
+
+.box{width:1000px;margin:0px auto;}
+</style>
+<script type="text/javascript">
+function result(index){
+	var arr = ["shitou.jpg","jiandao.jpg","bu.jpg"];
+	//获取id=computer_show的对象
+	var computer_show = document.getElementById("computer_show");
+	//删除上一次电脑随机出现的图片
+	computer_show.removeAttribute("src");
+	//获取id=people_show的对象
+	var people_show = document.getElementById("people_show");
+	//删除用户选择的图片
+	people_show.removeAttribute("src");
+	//获取随机数,调用随机函数
+	var random =  getRandom(0,3);
+	computer_show.src = "images/computer_" + arr[random];
+	//获取id=people_show的对象
+	var people_show = document.getElementById("people_show");
+	people_show.src = "images/people_" + arr[index];
+	//获取id=result_caiquan的对象
+	var result_caiquan = document.getElementById("result_caiquan");
+	//判断谁数谁赢
+	if (index==random)
+	{
+		result_caiquan.innerHTML = "平局!";
+	}else if (index == random - 1)
+	{
+		result_caiquan.innerHTML = "你赢了!";
+	}else if (index == random - 2)
+	{
+		result_caiquan.innerHTML = "好可惜哦,你输了!"
+	}else if (random == index - 1)
+	{
+		result_caiquan.innerHTML = "好可惜哦,你输了!"
+	}else
+	{
+		result_caiquan.innerHTML = "恭喜,你赢了!";
+	}
+}
+function getRandom(min,max)
+{
+	//求随机整数
+	var random = Math.random()*(max-min)+min;
+	//向下取整
+	random = Math.floor(random);
+	//返回结果
+	return random;
+}
+
+</script>
+</head>
+
+<body>
+	<div class="box">
+		<table border="1" align="center" rules="all">
+			<caption><h1>猜拳游戏</h1></caption>
+			<tr>
+				<td colspan="3"><h4>电脑的出拳结果为</h4></td>
+			</tr>
+			<tr>
+				<td colspan="3"><img height="150" id="computer_show" /></td>
+			</tr>
+			<tr>
+				<td  colspan="3" id="result_caiquan" height="20px">结果</td>
+			</tr>
+			<tr>
+				<td  colspan="3"><img height="150" id="people_show" /></td>
+			</tr>
+			<tr>
+				<td  colspan="3">你的出拳结果为</td>
+			</tr>
+			<tr>
+				<td>
+					<img height="150" src="images/people_shitou.jpg" /><br />
+					<input type="button" onclick="JavaScript:result(0)" value="要选我吗?" />
+				</td>
+				<td>
+					<img height="150" src="images/people_jiandao.jpg" /><br />
+					<input type="button" onclick="JavaScript:result(1)" value="要选我吗?" />
+				</td>
+				<td>
+					<img height="150" src="images/people_bu.jpg" /><br />
+					<input type="button" onclick="JavaScript:result(2)" value="要选我吗?" />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3"><h4>请出拳吧骚年!</h4></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
